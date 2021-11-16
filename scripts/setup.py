@@ -80,8 +80,8 @@ slurmdirs = NSDict({n: Path(p) for n, p in dict.items({
 cfg['log_dir'] = slurmdirs.log
 cfg['slurm_cmd_path'] = dirs.prefix/'bin'
 
-RESUME_TIMEOUT = 300
-SUSPEND_TIMEOUT = 300
+RESUME_TIMEOUT = 1200
+SUSPEND_TIMEOUT = 600
 
 CONTROL_MACHINE = cfg.cluster_name + '-controller'
 
