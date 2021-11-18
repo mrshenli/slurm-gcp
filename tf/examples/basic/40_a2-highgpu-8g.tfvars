@@ -1,4 +1,4 @@
-cluster_name = "pbelevich-40-a2-highgpu-8g"
+cluster_name = "shen-40-a2-highgpu-8g"
 project      = "pytorch-distributed"
 zone         = "us-central1-b"
 
@@ -59,16 +59,16 @@ login_disk_size_gb = 50
 # network_storage is mounted on all instances
 # login_network_storage is mounted on controller and login instances
 network_storage = [{
-  server_ip     = "10.224.253.18"
-  remote_mount  = "/pbelevich_share1"
+  server_ip     = "10.144.80.250"
+  remote_mount  = "/shen_share1"
   local_mount   = "/home"
   fs_type       = "nfs"
   mount_options = null
 }]
 
 login_network_storage = [{
-  server_ip     = "10.224.253.18"
-  remote_mount  = "/pbelevich_share1"
+  server_ip     = "10.144.80.250"
+  remote_mount  = "/shen_share1"
   local_mount   = "/home"
   fs_type       = "nfs"
   mount_options = null
@@ -95,8 +95,8 @@ partitions = [
     gpu_count            = 8
     gpu_type             = "nvidia-tesla-a100"
     network_storage      = [{
-        server_ip     = "10.224.253.18"
-        remote_mount  = "/pbelevich_share1"
+        server_ip     = "10.144.80.250"
+        remote_mount  = "/shen_share1"
         local_mount   = "/home"
         fs_type       = "nfs"
         mount_options = null
